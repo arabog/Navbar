@@ -13,12 +13,43 @@ import Contact from "./pages/contact/Contact"
 import Testimonial from "./pages/testimonial/Testimonial"
 import Service from "./pages/service/Service"
 
+import Navbar from './component/Navbar/Navbar'
+
 const App = () => {
 	return (
-		<div className="App">
-			Hello Jesus
+		<Router>
 
-		</div>
+			<Navbar />
+
+			<main>
+
+				<Switch>
+					<Route path="/" exact>
+						<Home />
+					</Route>
+
+					<Route path="/about" exact>
+						<About />					
+					</Route>
+		
+					<Route path="/contact" exact>
+						<Contact />
+					</Route>
+		
+					<Route path="/testimonial" exact>
+						<Testimonial />
+					</Route>
+
+					<Route path="/service" exact>
+						<Service />
+					</Route>
+
+					<Redirect to="/" />
+				</Switch>
+
+			</main>
+
+		</Router>
 	);
 }
 
