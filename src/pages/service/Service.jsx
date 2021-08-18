@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Home() {
+export default function Service() {
           return (
                     <div className="container">
                               <h1 className="text-center" style={{paddingTop: "30%"}}>
-                                        Home
+                                        Service
                               </h1>
                     </div>
           )
